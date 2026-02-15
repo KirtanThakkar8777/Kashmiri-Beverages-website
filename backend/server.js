@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "development") {
 connectDB();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 // Middlewares
 app.use(cors({
@@ -109,7 +109,7 @@ app.delete("/Message/:id", async (req, res) => {
 
 app.use("/api", authRoutes);
 
-if(process.env.NODE_ENV === "produuction"){
+if(process.env.NODE_ENV === "production"){
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
   app.get("*", (req, res) => {
