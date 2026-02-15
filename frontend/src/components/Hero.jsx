@@ -11,7 +11,6 @@ const slides = [
     info:"The Classic spice",
     bg: "linear-gradient(180deg, #B87333 0%, #8B5A2B 100%)",
     image: "/hero_images/main_Jeera.png",
-
   },
   {
     id: 2,
@@ -19,7 +18,7 @@ const slides = [
     subtitle: "KASHMIRI – ORANGE",
     info:"Citrus Burst",
     bg: "linear-gradient(180deg, #FF7B35 0%, #E55A00 100%",
-    image: "hero_images/new_orange.png",
+    image: "/hero_images/new_orange.png",
 
   },
   {
@@ -28,7 +27,7 @@ const slides = [
     subtitle: "KASHMIRI – LEMON",
     info:"Zesty Freshness",
     bg: "linear-gradient(180deg, #4CAF50 0%, #2E7D32 100%)",
-    image: "hero_images/IMG_SEGMENT_20260211_130302.png",
+    image: "/hero_images/IMG_SEGMENT_20260211_130302.png",
   },
   {
     id: 4,
@@ -36,14 +35,14 @@ const slides = [
     subtitle: "KASHMIRI – MANGO",
     info:"Tropical Paradise",
     bg: "linear-gradient(180deg, #FFB347 0%, #FF8C00 100%",
-    image: "hero_images/final_mango.png",
+    image: "/hero_images/final_mango.png",
   },
   {
     id: 5,
     name: "CLEAR LEMON",
     subtitle: "KASHMIRI – CLEAR_LEMON",
     info:"",
-    image: "hero_images/final clear_lemon.png",
+    image: "/hero_images/final clear_lemon.png",
   },
 ];
 const heroSlides = slides.slice(0, 4);
@@ -213,7 +212,7 @@ function Hero() {
               <div className="absolute right-0 w-130 h-130 bg-orange-500/50 rounded-full blur-3xl"></div>
               <div className=" relative inline-block">
                 <div className="absolute -bottom-2 -right-2 w-full h-full border-20 border-amber-200 z-0 rounded-4xl"></div>
-                <img src="hero_images/about_us.png" alt="" height={100} width={670} className="z-10 rounded-4xl drop-shadow-2xl" />
+                <img src="/hero_images/about_us.png" alt="" height={100} width={670} className="z-10 rounded-4xl drop-shadow-2xl" />
               </div>
             </div>
           </div>
