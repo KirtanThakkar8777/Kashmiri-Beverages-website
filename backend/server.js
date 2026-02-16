@@ -12,7 +12,7 @@ import { fileURLToPath } from "url";
 
 dotenv.config();
 
-if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV !== "development") {
   dns.setServers(["8.8.8.8", "1.1.1.1"]);
 }
 

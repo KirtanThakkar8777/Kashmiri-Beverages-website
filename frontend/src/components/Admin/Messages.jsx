@@ -12,7 +12,7 @@ function Messages() {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const res = await fetch("/Message",{
+        const res = await fetch("/api/Message",{
           method: "GET",
           credentials: "include"
         });
@@ -52,7 +52,7 @@ function Messages() {
     try {
       let conf = confirm("Do you really want to delete this message?")
       if (conf) {
-        const res = await fetch(`/Message/${id}`,
+        const res = await fetch(`/api/Message/${id}`,
           {
             method: "DELETE",
             headers: {
@@ -118,7 +118,7 @@ function Messages() {
                     <p className="mt-2 font-semibold">Mesage: {msg.message}</p>
                     <button onClick={() => deleteMsg(msg._id)}
                       className="flex items-center absolute right-6 bottom-4 cursor-pointer">
-                      <img src="src/assets/delete.png" width={20} alt="Delete" />
+                      <img src="/hero_images/delete.png" width={20} alt="Delete" />
                       <span className="ml-1">Delete</span>
                     </button>
                   </div>

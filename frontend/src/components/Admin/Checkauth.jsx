@@ -9,7 +9,7 @@ function Checkauth({children}){
     useEffect(() => {
 
         const checkAuth = async () =>{
-            const res = await fetch("http://localhost:5000/Message",{
+            const res = await fetch("/api/Message",{
                 method:"GET",
                 credentials: "include"
             });
