@@ -22,7 +22,7 @@ function Login() {
         if (!islogin) {
             // Sign up
             try {
-                const res = await fetch("http://localhost:5000/api/signup", {
+                const res = await fetch("/api/signup", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ function Login() {
         // Login
         else {
             try {
-                const res = await fetch("http://localhost:5000/api/Login", {
+                const res = await fetch("/api/Login", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",

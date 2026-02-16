@@ -19,7 +19,7 @@ function Contact_Us() {
         const toastId = toast.loading("Sending message...");
         try {
             const res = await minDelay(
-                fetch("http://localhost:5000/contact", {
+                fetch("/api/contact", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
