@@ -12,7 +12,7 @@ function Messages() {
   useEffect(() => {
     const fetchdata = async () => {
       try {
-        const res = await fetch("http://localhost:5000/Message",{
+        const res = await fetch("/Message",{
           method: "GET",
           credentials: "include"
         });
@@ -30,7 +30,7 @@ function Messages() {
 
   const logout = async () =>{
      try {
-      const res = await fetch("http://localhost:5000/api/logout", {
+      const res = await fetch("/api/logout", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +52,7 @@ function Messages() {
     try {
       let conf = confirm("Do you really want to delete this message?")
       if (conf) {
-        const res = await fetch(`http://localhost:5000/Message/${id}`,
+        const res = await fetch(`/Message/${id}`,
           {
             method: "DELETE",
             headers: {

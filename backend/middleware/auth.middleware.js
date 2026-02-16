@@ -6,7 +6,7 @@ const adminAuth = (req, res, next) => {
         const token = req.cookies.jwt;
 
         if(!token){
-            res.status(401).json({
+            return res.status(401).json({
               message: "Not authorized"
             })
         }
@@ -15,7 +15,7 @@ const adminAuth = (req, res, next) => {
         next();
 
     } catch(error){
-        res.status(401).json({
+        return res.status(401).json({
             message:"Token expired or invalid"
         });
     }
