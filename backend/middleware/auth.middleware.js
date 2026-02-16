@@ -6,7 +6,7 @@ const adminAuth = (req, res, next) => {
         const token = req.cookies.jwt;
 
         if(!token){
-            res.status(401).jason({
+            res.status(401).json({
               message: "Not authorized"
             })
         }
