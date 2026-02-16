@@ -65,7 +65,7 @@ app.post("/api/contact", async (req, res) => {
 });
 
 // Message fatch
-app.get('/Message',adminAuth, async (req, res) => {
+app.get('/api/Message',adminAuth, async (req, res) => {
   try{
     const data = await contact.find().sort({ createdAt: -1 });
     return res.status(200).json({
@@ -83,7 +83,7 @@ app.get('/Message',adminAuth, async (req, res) => {
 });
 
 //Message delete
-app.delete("/Message/:id", async (req, res) => {
+app.delete("/api/Message/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const deletedMessage = await contact.findByIdAndDelete(id);
@@ -115,7 +115,7 @@ app.use("/api", authRoutes);
 if(process.env.NODE_ENV === "production"){
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-  app.get((req, res) => {
+  app.get("/{*any}",(req, res) => {
     res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
   });
 }
