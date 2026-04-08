@@ -48,4 +48,10 @@ This project helped me understand how frontend and backend work together.
 - Express.js  
 
 ### Database
-- MongoDB  
+- MongoDB
+
+---
+
+## 📸 Preview
+<img width="1904" height="996" alt="image" src="https://github.com/user-attachments/assets/b1fc4db8-622b-42f7-9b05-3103c1396df5" />
+
